@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Signal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #00f0ff;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      animation: flicker 2s infinite alternate;
+    }
+
+    p {
+      max-width: 600px;
+      text-align: center;
+      color: #aaa;
+      margin: 30px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    .glitch {
+      color: #fff;
+      font-size: 1.5rem;
+      position: relative;
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 2px #ff00c8, -2px -2px #00f0ff;
+      }
+      50% {
+        text-shadow: -2px 2px #00f0ff, 2px -2px #ff00c8;
+      }
+      100% {
+        text-shadow: 2px -2px #ff00c8, -2px 2px #00f0ff;
+      }
+    }
+
+    .back {
+      margin-top: 40px;
+    }
+
+    .back a {
+      color: #00f0ff;
+      text-decoration: none;
+      border: 1px solid #00f0ff;
+      padding: 10px 20px;
+    }
+
+    .back a:hover {
+      background: #00f0ff;
+      color: #000;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://assets.mixkit.co/music/preview/mixkit-arcade-retro-game-over-213.wav" type="audio/wav">
+  </audio>
+
+  <h1>Signal Acquired</h1>
+  <p class="glitch">[ transmission active ]</p>
+  <p>We have intercepted a fragment of unknown origin. Time distorted. Coordinates unstable. Something is... coming.</p>
+
+  <div class="back">
+    <a href="index.html">Disconnect</a>
+  </div>
+</body>
+</html>

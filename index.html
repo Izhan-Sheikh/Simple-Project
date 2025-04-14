@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hey!..</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-            rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dark Star</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    </head>
-    <body>
-        <div class="img">
-            <img src="img/logo.png" alt>
-        </div>
+    body {
+      background: radial-gradient(circle at top, #0f0f0f, #000000);
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-        <button type="button" class="btn-outline-purple">Say Hello!</button>
-        <a href="#" class="a">Mentorship</a>
-        <div class="p">
-            <p><h1>FRONT-END DEVOLOPER, DESIGNER, SEO EXPERT & MANY
-                    MORE</h1></p>
-        </div>
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+    }
 
-        <div class="p2">
-            <p>I Desgin And Code Simply And I love What I do</p>
-        </div>
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 4px;
+      background: linear-gradient(90deg, #00f0ff, #ff00c8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
 
-        <div class="img2">
-            <img
-                src="img/Matt-Farleys-portfolio-transformed-removebg-preview.png"
-                alt>
+    p {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-top: 20px;
+      letter-spacing: 1px;
+    }
 
-        </div>
+    .button {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 12px 30px;
+      border: 2px solid #00f0ff;
+      color: #00f0ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-    </body>
+    .button:hover {
+      background-color: #00f0ff;
+      color: #000;
+      box-shadow: 0 0 15px #00f0ff;
+    }
 
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 15px #ff00c8;
+      }
+      to {
+        text-shadow: 0 0 20px #00f0ff, 0 0 30px #ff00c8, 0 0 40px #ff00c8;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .button {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Dark Star</h1>
+    <p>A place where design meets dimension. Are you ready?</p>
+    <a href="signal.html" class="button">Decode Signal</a>
+
+  </div>
+</body>
 </html>
